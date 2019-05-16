@@ -5,8 +5,8 @@
  
  <!--property 정의 -->
  <property name="build.dir" value="asdf\src"></property>
- <property name="build.prod.dir" location="${build.dir}/main"></property>
- <property name="build.test.dir" location="${build.dir}/test"></property>
+ <property name="build.prod.dir" location="${build.dir}\main\java"></property>
+ <property name="build.test.dir" location="${build.dir}\test\java"></property>
  
  <property name="src.dir" location="src"></property>
  <property name="test.dir" location="test"></property>
@@ -16,8 +16,8 @@
 <path id="project.classpath">
    <pathelement location="${build.prod.dir}"></pathelement>
    <pathelement location="${build.test.dir}"></pathelement>
-   <pathelement path="lib/junit.jar"/>
-   <pathelement path="lib/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+   <pathelement path="lib\junit.jar"/>
+   <pathelement path="lib\org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
 </path>
 
 <!-- target: prepare -->
@@ -47,14 +47,14 @@
 
 <!-- target : junit 시랭 -->
 <target name="tests" depends="compile-tests">
-   <record name="${test.reports}/test-output.txt" append="no" action="start"/>
+   <record name="${test.reports}\test-output.txt" append="no" action="start"/>
    <junit printsummary="yes" haltonerror="no" haltonfailure="no" fork="false" failureproperty="tests.failed" showoutput="true">
       <classpath refid="project.classpath"/>
       <formatter type="xml"/>
       <batchtest fork="yes" todir="$test.reports}">
          <fileset dir="${build.test.dir}">
-            <include name="**/*Test.*"/>
-            <excluse name="*/Test*All.*"/>
+            <include name="**\*Test.*"/>
+            <excluse name="*\Test*All.*"/>
          </fileset>
       </batchtest>
    </junit>
@@ -68,6 +68,6 @@
          </fileset>
          <report format="frames" todir="${test.reports}"/>
       </junitreport>
-      <record name="${test.reports}/test-output.txt" action="stop"/>
+      <record name="${test.reports}\test-output.txt" action="stop"/>
    </target>
 </project>
