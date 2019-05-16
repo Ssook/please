@@ -10,7 +10,7 @@ public class AppTest {
    public void testSum() {
       App app = new App();
       assertEquals(30, app.sum(10,20), 0);
-      assertEquals(10, app.sub(20,10), 0);
+      assertEquals(130, app.sub(20,10), 0);
    }
 
 }
