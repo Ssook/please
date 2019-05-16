@@ -4,8 +4,8 @@
  </description>
  
  <!--property 정의 -->
- <property name="build.dir" value="classes"></property>
- <property name="build.prod.dir" location="${build.dir}/prod"></property>
+ <property name="build.dir" value="asdf\src"></property>
+ <property name="build.prod.dir" location="${build.dir}/main"></property>
  <property name="build.test.dir" location="${build.dir}/test"></property>
  
  <property name="src.dir" location="src"></property>
