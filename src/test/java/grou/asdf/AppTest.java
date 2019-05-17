@@ -16,7 +16,7 @@ public class AppTest {
    static int num1 = 0, num2 = 0;
    static App app = null, app2 = null;
 
-@Test
+   @Test
    public void testSum() {
       Assert.assertEquals(num1 + num2, App.sum(num1, num2)); //return true;
    }
