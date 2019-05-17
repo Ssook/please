@@ -16,15 +16,15 @@ public class AppTest {
    static int num1 = 0, num2 = 0;
    static App app = null, app2 = null;
 
-@Test(timeout = 5000)
+@Test
    public void testSum() {
       Assert.assertEquals(num1 + num2, App.sum(num1, num2)); //return true;
    }
-   @Test(timeout = 5000)
+   @Test
    public void testFail() {
       Assert.assertEquals(num1 - num2, App.sum(num1, num2)); //return false;
    }
-   @Test(timeout = 5000)
+   @Test
    public void same() {
       Assert.assertSame(app, app2); //return false;
    }
