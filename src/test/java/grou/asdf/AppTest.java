@@ -16,14 +16,7 @@ public class AppTest {
    static int num1 = 0, num2 = 0;
    static App app = null, app2 = null;
 
-   @Test
-   public void testSum() {
-      Assert.assertEquals(num1 + num2, App.sum(num1, num2)); //return true;
-   }
-   @Test
-   public void testFail() {
-      Assert.assertEquals(num1 - num2, App.sum(num1, num2)); //return false;
-   }
+   
    @Test
    public void same() {
       Assert.assertSame(app, app2); //return false;
@@ -32,6 +25,15 @@ public class AppTest {
    public void isOdd() {   //홀수인지
       Assert.assertFalse(num1%2==1);
    }
+   @Test
+   public void testSum() {
+      Assert.assertEquals(num1 + num2, App.sum(num1, num2)); //return true;
+   }
+   @Test
+   public void testFail() {
+      Assert.assertEquals(num1 - num2, App.sum(num1, num2)); //return false;
+   }
+  
    @Test   
    public void isEven() {   //짝수인지
       Assert.assertTrue(num1%2==0);
