@@ -23,7 +23,6 @@ public class AppTest {
    @Test(timeout = 5000)
    public void testFail() {
       Assert.assertEquals(num1 - num2, App.sum(num1, num2)); //return false;
-      System.out.println("asd");
    }
    @Test(timeout = 5000)
    public void same() {
